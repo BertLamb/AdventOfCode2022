@@ -3,9 +3,10 @@ using System.Net.Sockets;
 
 using var inputStream = new StreamReader(File.OpenRead(@"C:\temp\input2.txt"));
 
-string? line;
+
 var score = 0;
-while ((line = inputStream.ReadLine()) != null)
+
+while (inputStream.ReadLine() is { } line)
 {
     // A = Rock = 1
     // B = Paper = 2
